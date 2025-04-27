@@ -27,7 +27,20 @@ body {
   }
 }
 
+/* Gridstack styles */
 .grid-stack .ui-resizable-handle {
   background: transparent !important;
   border: none !important;
+}
+
+/* Style for the ghost/placeholder when dragging */
+.grid-stack-placeholder > .placeholder-content {
+  background-color: rgba(70, 130, 180, 0.3) !important;
+  border: 2px dashed #4682b4 !important;
+  border-radius: 4px;
+}
+
+/* Reduce opacity of actual item while dragging */
+.grid-stack > .grid-stack-item.ui-draggable-dragging {
+  opacity: 0.7;
 }

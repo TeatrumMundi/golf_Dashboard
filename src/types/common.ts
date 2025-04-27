@@ -3,4 +3,5 @@
     gridY?: number;
     gridW?: number;
     gridH?: number;
+    isEditable?: boolean;
 }
