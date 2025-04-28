@@ -5,6 +5,7 @@ import { GridStack } from 'gridstack';
 import 'gridstack/dist/gridstack.min.css';
 import Speedometer from "@/components/dashBoard/cards/Speedometer";
 import { Eye, EyeOff } from 'lucide-react';
+import FuelCard from "@/components/dashBoard/cards/FuelCard";
 
 const GRID_CONFIG = {
     CELL_HEIGHT: 35,
@@ -64,6 +65,15 @@ export default function GridStackLayout() {
                     gridY={6}
                     gridW={5}
                     gridH={12}
+                    isEditable={isEditable}
+                />
+                <FuelCard
+                    fuelLevel={14}
+                    tankMaxCapacity={55}
+                    gridX={5}
+                    gridY={6}
+                    minW={2}
+                    minH={2}
                     isEditable={isEditable}
                 />
             </div>
