@@ -4,8 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import { GridStack } from 'gridstack';
 import 'gridstack/dist/gridstack.min.css';
 import Speedometer from "@/components/dashBoard/cards/Speedometer";
-import { Eye, EyeOff } from 'lucide-react';
 import FuelCard from "@/components/dashBoard/cards/FuelCard";
+import MileageCard from "@/components/dashBoard/cards/MileageCard";
+import EditableToggleButton from "@/components/dashBoard/buttons/EditableToggleButton";
 
 const GRID_CONFIG = {
     CELL_HEIGHT: 35,
@@ -76,17 +77,22 @@ export default function GridStackLayout() {
                     minH={2}
                     isEditable={isEditable}
                 />
+                <MileageCard
+                    mileage={123456}
+                    gridX={0}
+                    gridY={0}
+                    gridW={2}
+                    gridH={2}
+                    minW={2}
+                    minH={2}
+                    isEditable={isEditable}
+
+                />
             </div>
-            <button
-                onClick={() => setIsEditable(!isEditable)}
-                className="btn-primary absolute bottom-1 left-1 bg-zinc-700 rounded-sm p-0.5 hover:bg-zinc-600"
-            >
-                {isEditable ? (
-                    <EyeOff className="w-6 h-6 text-cyan-400 hover:text-cyan-700" />
-                ) : (
-                    <Eye className="w-6 h-6 text-cyan-400 hover:text-cyan-700" />
-                )}
-            </button>
+            <EditableToggleButton
+                isEditable={isEditable}
+                toggleEditable={() => setIsEditable(!isEditable)}
+            />
         </div>
     );
 }

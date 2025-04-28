@@ -50,7 +50,7 @@ export default function FuelCard(props: FuelCard) {
             isEditable={isEditable}
         >
             <div
-                className="bg-gray-700 w-3/4 h-10 rounded-xs overflow-hidden relative"
+                className="bg-gray-700 w-3/4 h-10 rounded-xs overflow-hidden relative select-none"
                 onClick={() => setShowLiters(!showLiters)}
             >
                 {/* Fuel bar */}
